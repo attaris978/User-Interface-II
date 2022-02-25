@@ -9,29 +9,49 @@
 <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
 <link rel="manifest" href=".assets/favicon/site.webmanifest">
+<script type="text/javascript">
+    function changeFocus(item) {
+    let data = [
+        ["Kushiel", "If you haven't read Kushiel's Dart you are missing out on life",".\/assets\/final7.png","Kushiel","Artistic rendering of Kushiel"],
+        ["Gandalf vs. the Balrog", "One of the most galvanizing moments from all cinema and literature",".\/assets\/final5.png","Gandolf vs the Balrog","Artistic rendering of Gandolf's battle with the Balrog"],
+        ["Hyperbole-and-a-Half Grump", "Allie Brosh's comically illustrated blog contains such gems as this image which perfectly depicts how I feel some mornings.",".\/assets\/final4.png","Grumpy Me","Allie Brosh's depiction of morning grumpiness"],
+        ["Responsiblity vs. Productivity", "Another Allie Brosh gem.",".\/assets\/final3.png"],
+        ["Rising Phoenix Orb", "An image I've spent more hours editing than they probably spent creating",".\/assets\/final2.png"],
+        ["What My Work Promises to Deliver", "Allie Brosh's advertisement for the things she will probably include in her book.",".\/assets\/final1.png"],
+        ["Phedre's Marque", "A less-than-detailed imagining of what Jacqueline Carey's character Phedre has limned on her back.",".\/assets\/final8.png"],
+        ["Fried Green Tomatoes - Food Fight Scene", "If you don't smile and laugh at this scene you're either seriously depressed or have no soul.",".\/assets\/final6.png"]
+    ];
+    let newInfo = data[item - 1]; 
+document.querySelector("h2.title").textContent=newInfo[0];
+document.querySelector("p.description").textContent=newInfo[1];
+document.querySelector("img.bio").src=newInfo[2];
+document.querySelector("img.bio").title=newInfo[3];
+document.querySelector("img.bio").alt=newInfo[4];
+}
+</script>
 </head>
 <body>
     <header>
         <div class="fc header-content">
             <div class="fc myName">
-                <p class="myName">Ryan Magro</p>
+                <h1 class="myName" title="My Name">Ryan Magro</h1>
             </div>
-            <div class="fc navDiv">
+            <nav class="fc navDiv">
                 <div class="fc buttonBox">
-                    <button type=button class="home" onclick="window.location.href='./index.html'">Home</button>
-                    <button type=button class="about" onclick="window.location.href='./about.html'">About</button>
-                    <button type=button class="projects" onclick="window.location.href='./projects.html'">Projects</button>
-                    <button type=button class="contact" onclick="window.location.href='./contact.html'">Contact</button>
+                    <button type=button class="home" title="Reload Homepage" onclick="window.location.href='./index.html'">Home</button>
+                    <button type=button class="about" title="About Me" onclick="window.location.href='./about.html'">About</button>
+                    <button type=button class="projects" title="My Projects" onclick="window.location.href='./projects.html'">Projects</button>
+                    <button type=button class="contact" title="Contact Me" onclick="window.location.href='./contact.html'">Contact</button>
                 </div>
-            </div>
+            </nav>
         </div>
         <div class="fc focus">
             <div class="fc bio">
-                <img class="bio" src="./assets/final9.png"/>
+                <img class="bio" src="./assets/final9.png" title="Me. Eek." alt="An unflattering self-image after shoveling"/>
             </div>
             <div class="details">
-                <p class="title">Ryan Magro</p>
-                <p>Once upon a time in a land far, far away, there lived
+                <h2 class="title" title="Selected Item's Title">Ryan Magro</h2>
+                <p class="description" title="Selected Item's Description">Once upon a time in a land far, far away, there lived
                     a no-longer-quite-so-young student studying web development.
                     One afternoon, after spending many hours removing snow and
                     ice from his driveway, he came inside and took a picture of
@@ -41,9 +61,9 @@
             </div>
         </div>
         <footer class="fc">
-            <div class="fc">
-                <button type=button class="contact" onclick="window.location.href='./contact.html'">Contact Me</button>
-                <button type=button class="projects" onclick="window.location.href='./projects.html'">My Projects</button>
+            <div class="fc footer">
+                <button type=button class="contact" title="Contact Me" onclick="window.location.href='./contact.html'">Contact Me</button>
+                <button type=button class="projects" title="My Projects" onclick="window.location.href='./projects.html'">My Projects</button>
             </div>
         </footer>
     
@@ -52,15 +72,15 @@
      
     <content>
         <div class="fc content">
-            <img class="content proj3" src="./assets/final7.png" />
-            <img class="content proj5" src="./assets/final5.png" />
-            <img class="content proj6" src="./assets/final4.png" />
+            <img class="content proj3" src="./assets/final7.png" title="Kushiel" alt="Artistic rendering of Kushiel from the novel 'Kushiel's Dart'" onclick="changeFocus(1);" />
+            <img class="content proj5" src="./assets/final5.png" title="Gandalf versus the Balrog" alt="Artistic rendering of Gandalf's battle with the Balrog from 'Lord of the Rings'" onclick="changeFocus(2);"/>
+            <img class="content proj6" src="./assets/final4.png" title="How I Feel in the Morning" alt="Hilarious cartoon self-image of Allie Brosh looking cranky while sitting with her coffee cup next to two disgustingly happy chatterboxes" onclick="changeFocus(3);"/>
         
-            <img class="content proj7" src="./assets/final3.png" />
-            <img class="content proj8" src="./assets/final2.png" />
-            <img class="content proj9" src="./assets/final1.png" />
-            <img class="content proj8" src="./assets/final8.png" />
-            <img class="content proj9" src="./assets/final6.png" />
+            <img class="content proj7" src="./assets/final3.png" title="Responsibility vs. Productivity" alt="Allie Brosh's comical graph of the relationship between level-of-responsibility and productivity" onclick="changeFocus(4);"/>
+            <img class="content proj8" src="./assets/final2.png" title="Phoenix Orb" alt="Orb shaped rendering of a blazing phoenix with light leaking from the orb's edges" onclick="changeFocus(5);"/>
+            <img class="content proj9" src="./assets/final1.png" title="What My Projects Include" alt="Allie Brosh's cartoon-strip advertisement for what her new book will include: pictures, words, margins, and possibly even page numbers." onclick="changeFocus(6);"/>
+            <img class="content proj8" src="./assets/final8.png" title="Phedre's Marque" alt="Artistic rendering of Phedre's completed Marque from Jacqueline Carey's 'Kushiel' novels" onclick="changeFocus(7);"/>
+            <img class="content proj9" src="./assets/final6.png" title="Fried Green Tomatoes" alt="One of time's greatest cinematic moments which warms the heart and compels laughter: the food fight scene from 'Fried Green Tomatoes'" onclick="changeFocus(8);"/>
             </div>
     </content>
     
